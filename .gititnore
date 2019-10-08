@@ -11,6 +11,9 @@ $py.class
 # C extensions
 .so
 
+# MS Visual Studio
+.vs
+
 # Distribution  packaging
 .Python
 build
