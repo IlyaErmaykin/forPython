@@ -1,22 +1,12 @@
-a = int(input());
-b = int(input());
-c = int(input());
-d = int(input());
-print(" ", end=" ");
-for x in range (c,d + 1):
-    print(x, end=" ");
-    x += 1;
-    continue;
-print();
+s = str(input());
+sL = s.lower();
+strNum = 0;
+res = 0;
+n = 0;
+for i in sL:
+    strNum = strNum + 1;
 
-for i in range (a, b + 1):
-    for j in range (c - 1, d + 1):
-        if (j == c - 1):
-            print(i, end=" ");
-            continue;
-        print(i * j, end=" ");
-        j += 1;
-    print();
-    i += 1;
-        
+n = sL.count("c") + sL.count("g");
+res = float((n / strNum) * 100);
+print(res);     
 
