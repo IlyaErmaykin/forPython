@@ -1,19 +1,26 @@
-def f(x):
-    return(x * 2);
-
-n = int(input());
-i = 0;
+with open("_.txt") as inf:
+    s1 = inf.readline();
+#s1 = "a3b4c2e10b1";
 res = "";
-d = {};
-while i < n:
-    x = int(input());
-    if (x in d):
-        res = res + str(d[x]) + "\n";
-    elif (x not in d):
-        d[x] = f(x);
-        res = res + str(d[x]) + "\n";
+i = 0;
+s = "";
+c = "";
+while i < len(s1):
+    if (s1[i].isalpha()):
+        if bool(s and c and s.strip() and c.strip()):
+            res = res + (s * int(c));            
+            s = " ";
+            c = " ";
+        s = s1[i];
+
+    elif (s1[i].isdigit()):
+        c = c + s1[i];
+            
     i += 1;
-print(res);
+if bool(s and c and s.strip() and c.strip()):
+    res = res + (s * int(c));
+with open("r.txt", "w") as ouf:
+    ouf.write(res);
 
 #m = [['9', '5', '3'], ['0', '7', '-1'], ['-5', '2', '9']];
 #res = [];
