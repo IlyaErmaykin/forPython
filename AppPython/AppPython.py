@@ -1,29 +1,20 @@
-# не добавляйте кода вне функции
-def update_dictionary(d, key, value):
-    if (key in d):
-        d.setdefault(key, []).append(value);
-    elif(key * 2  in d):
-        d.setdefault(key * 2, []).append(value);
-    else :
-        d[key * 2] = [value];
-    return;
-# не добавляйте кода вне функции
+def f(x):
+    return(x * 2);
 
-d = {}
-print(update_dictionary(d, 1, -1))  # None
-print(d)                            # {2: [-1]}
-update_dictionary(d, 2, -2)
-print(d)                            # {2: [-1, -2]}
-update_dictionary(d, 1, -3)
-print(d)  
-#print(update_dictionary(d, 0, -5))  # none
-#print(d)                            # {2: [-1]}
-#update_dictionary(d, 1, -1)
-#print(d)                            # {2: [-1, -2]}
-#update_dictionary(d, 2, -2)
-#print(d)                   
-#update_dictionary(d, 3, -3)
-#print(d)                            # {2: [-1, -2, -3]}
+n = int(input());
+i = 0;
+res = "";
+d = {};
+while i < n:
+    x = int(input());
+    if (x in d):
+        res = res + str(d[x]) + "\n";
+    elif (x not in d):
+        d[x] = f(x);
+        res = res + str(d[x]) + "\n";
+    i += 1;
+print(res);
+
 #m = [['9', '5', '3'], ['0', '7', '-1'], ['-5', '2', '9']];
 #res = [];
 ##f = True;
