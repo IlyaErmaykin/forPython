@@ -1,26 +1,7 @@
-with open("_.txt") as inf:
-    s1 = inf.readline();
-#s1 = "a3b4c2e10b1";
-res = "";
-i = 0;
-s = "";
-c = "";
-while i < len(s1):
-    if (s1[i].isalpha()):
-        if bool(s and c and s.strip() and c.strip()):
-            res = res + (s * int(c));            
-            s = " ";
-            c = " ";
-        s = s1[i];
-
-    elif (s1[i].isdigit()):
-        c = c + s1[i];
-            
-    i += 1;
-if bool(s and c and s.strip() and c.strip()):
-    res = res + (s * int(c));
-with open("r.txt", "w") as ouf:
-    ouf.write(res);
+import math;
+r = float(input());
+res = 2 * math.pi * r;
+print(res);
 
 #m = [['9', '5', '3'], ['0', '7', '-1'], ['-5', '2', '9']];
 #res = [];
