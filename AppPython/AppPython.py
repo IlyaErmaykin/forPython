@@ -1,5 +1,11 @@
 def func(s):
-        
+    с = 0;
+    for i in range(len(s)):
+        c = s.count(s[i]);
+        if (c > M):
+            c = M;
+        else: 
+            continue;
     return M
 
 M = 0;
