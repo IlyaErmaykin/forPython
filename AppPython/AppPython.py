@@ -1,7 +1,20 @@
-import math;
-r = float(input());
-res = 2 * math.pi * r;
-print(res);
+def func(s):
+        
+    return M
+
+M = 0;
+Line = "";
+
+with open("_.txt") as inf:
+    for line in inf:
+        Line = Line + line.strip();
+
+func(Line);
+print(Line);
+
+
+
+
 
 #m = [['9', '5', '3'], ['0', '7', '-1'], ['-5', '2', '9']];
 #res = [];
