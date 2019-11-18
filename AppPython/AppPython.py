@@ -1,22 +1,23 @@
-def func(s):
-    с = 0;
-    for i in range(len(s)):
-        c = s.count(s[i]);
-        if (c > M):
-            c = M;
-        else: 
-            continue;
-    return M
-
 M = 0;
+с = 0;
 Line = "";
+Element = ""
 
 with open("_.txt") as inf:
     for line in inf:
         Line = Line + line.strip();
 
-func(Line);
-print(Line);
+
+for i in range(len(Line)):
+    lLine = Line.lower();
+    c = Line.count(lLine[i]);
+    if (c > M):
+        Element = lLine[i];
+        M = c;
+    else: 
+        continue;
+
+print(Element, M);
 
 
 
