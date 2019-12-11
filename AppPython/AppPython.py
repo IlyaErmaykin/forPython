@@ -10,14 +10,15 @@ users = [
     {'name': 'Jack8', 'score': 3.234, 'age': 100},
 ]
 
-def user_with_max_score(users):
+def user_with_max_score(users, key):
     max_score = -1;
     max_user = None;
     for user in users:
-        if max_score < user['score']:
-            max_score = user['score'];
+        if max_score < user[key]:
+            max_score = user[key];
             max_user = user;
     
     return max_user;
 
-print (user_with_max_score(users));
+print (user_with_max_score(users, 'score'));
+print (user_with_max_score(users, 'age'));
