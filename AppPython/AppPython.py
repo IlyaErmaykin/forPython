@@ -1,58 +1,22 @@
-M = 0;
-с = 0;
-List = [];
-Element = "";
-Dict = {};
+#score = [1, 2, 3, 4, 2.7, 8.1, 34.3, 3.234]
+users = [
+    {'name': 'Jack1', 'score': 1, 'age': 81},
+    {'name': 'Jack2', 'score': 2, 'age': 82},
+    {'name': 'Jack3', 'score': 3, 'age': 89},
+    {'name': 'Jack4', 'score': 4, 'age': 60},
+    {'name': 'Jack5', 'score': 2.7, 'age': 12},
+    {'name': 'Jack6', 'score': 8.1, 'age': 73},
+    {'name': 'Jack7', 'score': 34.3, 'age': 8},
+    {'name': 'Jack8', 'score': 3.234, 'age': 100},
+]
 
-with open("_.txt") as inf:
-    for line in inf:
-        List = List + line.split();
-
-
-for i in range(len(List)):
-    if (List[i].lower() in Dict):
-        Dict[List[i]] += 1;
-    elif (List[i].lower() not in Dict):
-        Dict[List[i]] = 1;
-
-maximum = max(Dict, key=Dict.get)  # Just use 'min' instead of 'max' for minimum.
-print(maximum, Dict[maximum])
-
-print(Dict);
+max_score = -1;
+max_user = None;
+for user in users:
+    if max_score < user['score']:
+        max_score = user['score'];
+        max_user = user;
 
 
-##m = [['9', '5', '3'], ['0', '7', '-1'], ['-5', '2', '9']];
-##res = [];
-###f = True;
-###x = 0;
-###while f:
-###    s = list(input().split());
-###    if (x == 0):
-###        x = len(s);
-###    if (s != ["end"]):
-###        m.append(s);
-###    else: 
-###        f = False;
-###        y = len(m);    
-
-##for i in range(3):
-##    for j in range(3):
-##        if (i == 0 and j == 0):
-##            res.append(sum([int(m[i + 1][j]), int(m[-1][j]), int(m[i][-1]), int(m[i][j + 1])]));
-##        elif (i == 0 and j == (-1)):
-##            res.append(sum([int(m[0][j]), int(m[i - 1][j]), int(m[i][-1]), int(m[i][j + 1])]));
-##        elif (i == (-1) and j == 0):
-##            res.append(sum([int(m[0][j]), int(m[i - 1][j]), int(m[i][j + 1]), int(m[i][-1])]));
-##        elif (i == -1 and j == (-1)):
-##            res.append(sum([int(m[0][j]), int(m[i - 1][j]), int(m[i][0]), int(m[i][j - 1])]));
-##        elif (i == 1 and (j != 0 or j != (-1))):
-##            res.append(sum([int(m[i + 1][j]), int(m[-1][j]), int(m[i][j + 1]), int(m[i][j - 1])]));
-##        elif (i == (-1) and (j != 0 or j != (-1))):
-##            res.append(sum([int(m[0][j]), int(m[i - 1][j]), int(m[i][j + 1]), int(m[i][j - 1])]));
-##        elif ((i != 1 or i != (-1)) and j == 0):
-##            res[i][j] = sum([m[i + 1][j], m[i - 1][j], m[i][j + 1], m[i][-1]]);
-##        elif ((i != 1 or i != (-1)) and j != (-1)):
-##            res.append(sum([int(m[i + 1][j]), int(m[i - 1][j]), int(m[i][0]), int(m[i][j - 1])]));
-##        else:
-##            res.append(sum([int(m[i + 1][j]), int(m[i - 1][j]), int(m[i][j + 1]), int(m[i][j - 1])]));
-##print(x, y);
+print (max_score);
+print (max_user);
