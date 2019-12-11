@@ -1,24 +1,27 @@
-#score = [1, 2, 3, 4, 2.7, 8.1, 34.3, 3.234]
-users = [
-    {'name': 'Jack1', 'score': 1, 'age': 81},
-    {'name': 'Jack2', 'score': 2, 'age': 82},
-    {'name': 'Jack3', 'score': 3, 'age': 89},
-    {'name': 'Jack4', 'score': 4, 'age': 60},
-    {'name': 'Jack5', 'score': 2.7, 'age': 12},
-    {'name': 'Jack6', 'score': 8.1, 'age': 73},
-    {'name': 'Jack7', 'score': 34.3, 'age': 8},
-    {'name': 'Jack8', 'score': 3.234, 'age': 100},
-]
+# Задача: Реализовать электронную очередь;
 
-def user_with_max_score(users, key):
-    max_score = -1;
-    max_user = None;
-    for user in users:
-        if max_score < user[key]:
-            max_score = user[key];
-            max_user = user;
-    
-    return max_user;
+queue = [];
 
-print (user_with_max_score(users, 'score'));
-print (user_with_max_score(users, 'age'));
+def add(element): # add to queue
+    global queue;
+    queue.append(element);
+    print(element, 'added to queue');
+
+def remove():
+    global queue;
+    if len(queue) == 0:
+        return;
+
+    result = queue[0];
+    queue = queue[1:];
+    print(result, 'remove from queue');
+    return result;
+
+add('user1');
+add('user2');
+remove();
+remove();
+remove();   
+
+
+print(f'Queue has {len(queue)} users');
