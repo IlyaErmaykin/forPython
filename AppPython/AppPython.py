@@ -1,16 +1,27 @@
 n = int(input());
-x = 0;
-y = 0;
+List = [];
 
-for play in range(n):
-    a = input().split();
-    if (a[0].lower() == "север"):
-        y = y + int(a[1]);
-    elif (a[0].lower() == "восток"):
-        x = x + int(a[1]);
-    elif (a[0].lower() == "юг"):
-        y = y - int(a[1]);
+for word in range(n):
+    List.append(str(input()).lower());
+#print(List);
+
+nLine = int(input());
+linesList = [];
+multitude = set();
+
+for line in range(nLine):
+    l = str(input().lower()).split();
+    for el in range(len(l)):
+        multitude.add(str(l[el]));
+#print(linesList);
+
+for el in range(len(List)):
+    if (List[el] in multitude):
+        multitude.remove(List[el]);
     else:
-        x = x - int(a[1]);
+        continue;
 
-print(x, y);
+for el in multitude:
+    print(el);
+
+
