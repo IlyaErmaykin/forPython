@@ -2,15 +2,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>29d1ca8b-c421-4100-9df5-d2593f33b1a8</ProjectGuid>
-    <ProjectHome>.</ProjectHome>
-    <StartupFile>AppPython.py</StartupFile>
-    <SearchPath>CheckMethods</SearchPath>
+    <ProjectGuid>aa7ca72f-959b-44e4-a1e9-bb92498a2adb</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>AppPython</Name>
-    <RootNamespace>AppPython</RootNamespace>
-    <IsWindowsApplication>False</IsWindowsApplication>
+    <Name>MetricService</Name>
+    <RootNamespace>MetricServce</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,19 +23,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AppPython.py" />
-    <Compile Include="CheckMethods\CommonModule.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="CheckMethods\HolstedMetricsModule.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Server.py">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="MetricService.py" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CheckMethods\" />
+    <Content Include="index.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "AppPython", "AppPython.pyproj", "{29D1CA8B-C421-4100-9DF5-D2593F33B1A8}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MetricService", "..\MetricServce\MetricService.pyproj", "{AA7CA72F-959B-44E4-A1E9-BB92498A2ADB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{29D1CA8B-C421-4100-9DF5-D2593F33B1A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{29D1CA8B-C421-4100-9DF5-D2593F33B1A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA7CA72F-959B-44E4-A1E9-BB92498A2ADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA7CA72F-959B-44E4-A1E9-BB92498A2ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
