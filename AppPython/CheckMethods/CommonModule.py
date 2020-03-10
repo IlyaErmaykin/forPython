@@ -1,3 +1,11 @@
+# Функция чтения файла;
+def ReadFile(inf):
+    res = "";
+    for line in inf:
+        res = res + line.strip();
+    print(res);
+    return res;    
+
 # Функция возвращает количаство строк в файле;
 def StringCountModule(inf):
     res = 0;

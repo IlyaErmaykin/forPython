@@ -5,7 +5,7 @@
     <ProjectGuid>29d1ca8b-c421-4100-9df5-d2593f33b1a8</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>AppPython.py</StartupFile>
-    <SearchPath>CheckMethods</SearchPath>
+    <SearchPath>CheckMethods;web;web;templates</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>AppPython</Name>
@@ -34,6 +34,19 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CheckMethods\" />
+    <Folder Include="static\" />
+    <Folder Include="static\css\" />
+    <Folder Include="static\image\" />
+    <Folder Include="templates\" />
+    <Folder Include="web\" />
+    <Folder Include="web\img\" />
+    <Folder Include="web\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="static\image\_1.jpg" />
+    <Content Include="templates\index.html" />
+    <Content Include="web\img\_1.jpg" />
+    <Content Include="web\templates\index.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
