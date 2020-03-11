@@ -3,19 +3,17 @@ import CommonModule;
 import HolstedMetricsModule;
 # 1. Читать файл;
 # 2. Получить количество строк;
+# 3. Получить количество строк с однострочными комментариями;
 
 Inf = "";
 
 TestPath = "D:\\Projects\\forPython\\_.txt";
 with open(TestPath, "r") as inf:
    Inf = CommonModule.ReadFile(inf);
-    
-CommonModule.StringCountModule(Inf);
+
 CommonModule.StringCountModule(Inf);
 CommonModule.CommenStringOnesCountModule(Inf);    
-    
-    # TODO
-    #CommonModule.CommenStringOtherCountModule(inf);
+#CommonModule.CommenStringOtherCountModule(inf);
     
     #HolstedMetricsModule.CheckUniqueProgramOperands();
     #HolstedMetricsModule.CheckUniqueProgramOperators();

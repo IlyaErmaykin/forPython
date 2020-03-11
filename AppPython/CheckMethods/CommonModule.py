@@ -2,15 +2,14 @@
 def ReadFile(inf):
     res = "";
     for line in inf:
-        res = res + line.strip();
-    print(res);
+        res = res + line;
     return res;    
 
 # Функция возвращает количаство строк в файле;
 def StringCountModule(inf):
     res = 0;
-    for line in inf:
-        if line.split():
+    for line in inf.split('\n'):
+        if line.strip():
             res = res + 1;
     print("Количество строк в выбранном файле: " + str(res));
 
