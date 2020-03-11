@@ -1,27 +1,33 @@
+def CreateOperatorsDictionary(inf):
+    res = {}
+    for op in inf:
+        res[op.replace('\n','')] = 0
+    return res;
+
 # Функция получения уникального числа операторов;
 def CheckUniqueProgramOperators():
-    return True;
+    pass;
 
 # Функция получения уникального числа операндов;
 def CheckUniqueProgramOperands():
-    return True;
+    pass;
 
 # Функция получения количества всех операторов;
 def TotalCountOperators():
-    return True;
+    pass;
 
 # Функция получения количества всех операндов;
 def TotalCountOperands():
-    return True;
+    pass;
 
 # Функция получения словаря программы;
 def ProgramDictionary():
-    return True;
+    pass;
 
 # Функция получения длины программы;
 def ProgramLenth():
-    return True;
+    pass;
 
 # Функция получения объема программы;
 def ProgramVolume():
-    return True;
+    pass;

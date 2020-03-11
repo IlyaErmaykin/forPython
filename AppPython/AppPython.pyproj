@@ -31,6 +31,7 @@
     <Compile Include="Server.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="_source\Halstead-Metrics-master\halstead.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CheckMethods\" />
@@ -41,12 +42,16 @@
     <Folder Include="web\" />
     <Folder Include="web\img\" />
     <Folder Include="web\templates\" />
+    <Folder Include="_source\" />
+    <Folder Include="_source\Halstead-Metrics-master\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="static\image\_1.jpg" />
     <Content Include="templates\index.html" />
     <Content Include="web\img\_1.jpg" />
     <Content Include="web\templates\index.html" />
+    <Content Include="_source\Halstead-Metrics-master\operators" />
+    <Content Include="_source\Halstead-Metrics-master\README.md" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
