@@ -7,26 +7,36 @@ import HolstedMetricsModule;
 # 4. Получить количество строк с многострочными комментариями;
 #--------------------
 # + 5. Читать файл операторов;
+# + 6. Создать словарь операторов;
 
 
 Inf = "";
-Operators = {}
+Operators = {};
+Operands = {};
 
 TestPath = "D:\\Projects\\forPython\\AppPython\\_temp\\_.txt";
+TestPath_2 = "D:\\Projects\\forPython\\AppPython\\_temp\\help.py";
 OperatorsFileName = "D:\\Projects\\forPython\\AppPython\\_temp\\operators.txt";
 
-#with open(TestPath, "r") as inf:
-#   Inf = CommonModule.ReadFile(inf);
+with open(TestPath_2, "r") as inf:
+   Inf = CommonModule.ReadFile(inf);
 
-#CommonModule.StringCountModule(Inf);
-#CommonModule.CommenStringOnesCountModule(Inf);    
+CommonModule.StringCountModule(Inf);
+CommonModule.CommenStringOnesCountModule(Inf);    
 #CommonModule.CommenStringOtherCountModule(inf);
 #--------------------    
 
 with open(OperatorsFileName) as f:
-    Operators = HolstedMetricsModule.CreateOperatorsDictionary(f)
-    print(Operators);
+    Operators = HolstedMetricsModule.CreateOperatorsDictionary(f);
 
+with open(TestPath_2) as f:
+    Operators, Operands = HolstedMetricsModule.CreateOperandsDictionary(Operators, f);
+
+n1, N1, n2, N2 = 0, 0, 0, 0
+n1, N1, n2, N2 = HolstedMetricsModule.PtintFunction(Operators, Operands);
+
+HolstedMetricsModule.CountMetrics(n1, N1, n2, N2)
+print("");  
 #HolstedMetricsModule.CheckUniqueProgramOperands();
 #HolstedMetricsModule.CheckUniqueProgramOperators();
 #HolstedMetricsModule.TotalCountOperands();

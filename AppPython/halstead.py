@@ -2,9 +2,9 @@
 import sys
 from math import log2
 
-if(len(sys.argv) != 2):
-    print("Usage: python3 halstead.py name_of_program")
-    exit()
+#if(len(sys.argv) != 2):
+#    print("Usage: python3 halstead.py name_of_program")
+#    exit()
 
 operatorsFileName = "D:\\Projects\\forPython\\AppPython\\_temp\\operators.txt";
 programFileName = "D:\\Projects\\forPython\\AppPython\\_temp\\help.py";
