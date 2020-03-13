@@ -1,3 +1,5 @@
+import glob;
+
 # Функция чтения файла;
 def ReadFile(inf):
     res = "";
@@ -23,4 +25,9 @@ def CommenStringOnesCountModule(inf):
 
 # Функция подсчета многострочных комментариев;
 def CommenStringOtherCountModule(inf):
-    return True;
+    pass;
+
+# Функция поиска файлов в директории;
+def SerachFiles(path):
+    files = [f for f in glob.glob(path + "**/*.*", recursive=True)];
+    return files;

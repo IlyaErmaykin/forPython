@@ -1,6 +1,7 @@
 import copy;
 import CommonModule;
 import HolstedMetricsModule;
+
 # + 1. Читать файл;
 # + 2. Получить количество строк;
 # + 3. Получить количество строк с однострочными комментариями;
@@ -11,12 +12,20 @@ import HolstedMetricsModule;
 
 
 Inf = "";
+Files = [];
 Operators = {};
 Operands = {};
 
 TestPath = "D:\\Projects\\forPython\\AppPython\\_temp\\_.txt";
 TestPath_2 = "D:\\Projects\\forPython\\AppPython\\_temp\\help.py";
 OperatorsFileName = "D:\\Projects\\forPython\\AppPython\\_temp\\operators.txt";
+
+path = "D:\\Projects\\forPython\\AppPython\\_temp\\";
+
+Files = CommonModule.SerachFiles(path);
+
+for file in Files:
+    print(file);
 
 with open(TestPath_2, "r") as inf:
    Inf = CommonModule.ReadFile(inf);
