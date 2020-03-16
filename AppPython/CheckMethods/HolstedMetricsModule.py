@@ -44,22 +44,22 @@ def CreateOperandsDictionary(operators, f):
 def PtintFunction(operators, operands):
     n1, N1, n2, N2 = 0, 0, 0, 0
 
-    print("ОПЕРАТОРЫ:\n");
+    print("\nОПЕРАТОРЫ:\n");
     for key in operators:
         if(operators[key] > 0):
             if(key not in ")}]"):
                 n1, N1 = n1 + 1, N1 + operators[key];
-                print("{} = {}".format(key, operators[key]));
+                #print("{} = {}".format(key, operators[key]));
 
     print("\nОПЕРАНДЫ\n");
     for key in operands.keys():
         if(operands[key] > 0):
             n2, N2 = n2 + 1, N2 + operands[key];
-            print("{} = {}".format(key, operands[key]));
+            #print("{} = {}".format(key, operands[key]));
 
     return n1, N1, n2, N2;
 
-def CountMetrics(n1, N1, n2, N2):
+def CountMetrics(n1, N1, n2, N2, outputFile):
     val = {"N": N1 + N2, "n": n1 + n2, "V": (N1 + N2) * log2(n1 + n2), "D": n1 * N2 / 2 / n2}
     val['E'] = val['D'] * val['V']
     val['L'] = val['V'] / val['D'] / val['D']
@@ -71,31 +71,13 @@ def CountMetrics(n1, N1, n2, N2):
     unit = {'V': 'Количество бит', 'T': 'Секунды'}
     name = {'N':'Длина программы', 'n':'Словарь программы', 'V':'Объем программы', 'D':'Сложность программы', 'E': 'Нагруженность программы', 'L':'Уровень языка', 'I':'Вычислительная мощность', 'T':'Время выполнения программы   ','N^':'Планируемая длина программф', 'L^':'Планируемый уровень языка'}
 
+    outFile = open(outputFile, 'a');
+
     print("\nВывод значений: ")
     for key in val.keys():
-        print("{} ({}) = {} {}".format(key,name[key], val[key], unit[key] if key in unit else ''))
+        print("{} ({}) = {} {}".format(key,name[key], val[key], unit[key] if key in unit else ''));
+        outFile.write("{} ".format(val[key]));
+    outFile.write("\n");    
+    print("\n");
 
     return True;
-# Функция получения уникального числа операндов;
-def CheckUniqueProgramOperands():
-    pass;
-
-# Функция получения количества всех операторов;
-def TotalCountOperators():
-    pass;
-
-# Функция получения количества всех операндов;
-def TotalCountOperands():
-    pass;
-
-# Функция получения словаря программы;
-def ProgramDictionary():
-    pass;
-
-# Функция получения длины программы;
-def ProgramLenth():
-    pass;
-
-# Функция получения объема программы;
-def ProgramVolume():
-    pass;
