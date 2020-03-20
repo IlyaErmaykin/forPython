@@ -1,6 +1,7 @@
 import copy;
 import CommonModule;
 import HolstedMetricsModule;
+import MathAnalysisModule;
 import glob;
 
 # + 1. Читать файл;
@@ -48,5 +49,8 @@ for file in Files:
     n1, N1, n2, N2 = HolstedMetricsModule.PtintFunction(Operators, Operands);
 
     HolstedMetricsModule.CountMetrics(n1, N1, n2, N2, OutputFile)
+
+MathAnalysisModule.getKohonenNetworkAnalysis(OutputFile);
+
 print("");  
     

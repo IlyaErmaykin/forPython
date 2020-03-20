@@ -5,7 +5,7 @@
     <ProjectGuid>29d1ca8b-c421-4100-9df5-d2593f33b1a8</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>AppPython.py</StartupFile>
-    <SearchPath>CheckMethods;web;web;templates</SearchPath>
+    <SearchPath>CheckMethods;templates;AnalysisMethods</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>AppPython</Name>
@@ -21,11 +21,17 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AnalysisMethods\KohonenNetwork.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="AppPython.py" />
     <Compile Include="CheckMethods\CommonModule.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="CheckMethods\HolstedMetricsModule.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CheckMethods\MathAnalysisModule.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="halstead.py" />
@@ -35,7 +41,10 @@
     <Compile Include="_source\Halstead-Metrics-master\halstead.py" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AnalysisMethods\" />
+    <Folder Include="AnalysisMethods\__pycache__\" />
     <Folder Include="CheckMethods\" />
+    <Folder Include="CheckMethods\AnalysisMethods\" />
     <Folder Include="static\" />
     <Folder Include="static\css\" />
     <Folder Include="static\image\" />
@@ -48,6 +57,7 @@
     <Folder Include="_temp\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AnalysisMethods\__pycache__\KohonenNetwork.cpython-37.pyc" />
     <Content Include="static\image\_1.jpg" />
     <Content Include="templates\index.html" />
     <Content Include="web\img\_1.jpg" />

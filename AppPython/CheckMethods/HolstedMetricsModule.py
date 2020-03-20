@@ -76,7 +76,7 @@ def CountMetrics(n1, N1, n2, N2, outputFile):
     print("\nВывод значений: ")
     for key in val.keys():
         print("{} ({}) = {} {}".format(key,name[key], val[key], unit[key] if key in unit else ''));
-        outFile.write("{} ".format(val[key]));
+        outFile.write("{}{} ".format(val[key], "\t"));
     outFile.write("\n");    
     print("\n");
 
